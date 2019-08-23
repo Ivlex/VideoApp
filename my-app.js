@@ -19,13 +19,14 @@ var app = new Framework7({
 });
 var mainView = app.views.create('.view-main');
 
-var ip = 'http://192.168.100.10:32227/';
+var ip = 'http://192.168.3.147:52034/';
+var pwd = 'Yum8p3SRdN295k2';/*1017882C7824WIP*/
 
 function OnPtzMouseUp()
 {
 var url;
 url=ip+'decoder_control.cgi?';
-url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/'1017882C7824WIP';
+url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/pwd;
 url+='&command=0&onestep=1';
 url+='&' + new Date().getTime() + Math.random();
 $.getScript(url);
@@ -35,7 +36,7 @@ function OnPtzMouseLeft()
 {
 var url;
 url=ip+'decoder_control.cgi?';
-url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/'1017882C7824WIP';
+url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/pwd;
 url+='&command=4&onestep=1';
 url+='&' + new Date().getTime() + Math.random();
 $.getScript(url);
@@ -45,7 +46,7 @@ function OnPtzMouseRight()
 {
 var url;
 url=ip+'decoder_control.cgi?';
-url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/'1017882C7824WIP';
+url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/pwd;
 url+='&command=6&onestep=1';
 url+='&' + new Date().getTime() + Math.random();
 $.getScript(url);
@@ -55,7 +56,7 @@ function OnPtzMouseDown()
 {
 var url;
 url=ip+'decoder_control.cgi?';
-url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/'1017882C7824WIP';
+url+='&loginuse='+'admin'/*loginuser*/+'&loginpas='+/*encodeURIComponent(loginpass)*/pwd;
 url+='&command=2&onestep=1';
 url+='&' + new Date().getTime() + Math.random();
 $.getScript(url);
@@ -83,7 +84,7 @@ var dynamicPopup = app.popup.create({
               '<div class="block">'+
                 //'<p>Popup created dynamically.</p>'+
                 //'<div name="ipcamdiv" width="640" height="360" id="ipcamdiv" align="center" src="http://192.168.100.10:32227/videostream.cgi?user=admin&pwd=1017882C7824WIP" style="width: 640px; height: 360px;"></div>' +
-                '<img style="-webkit-user-select: none;" src="'+ ip +'videostream.cgi?user=admin&amp;pwd=1017882C7824WIP" width="640" height="360">'+
+                '<img style="-webkit-user-select: none;" src="'+ ip +'videostream.cgi?user=admin&amp;pwd=' + pwd +'" width="640" height="360">'+
                 '<button class="col button button-fill color-blue" style="width:360px" onclick="OnPtzMouseUp()">Up</button>' +
                 '<button class="col button button-fill color-blue" style="width:360px" onclick="OnPtzMouseLeft()">Left</button>' +
                 '<button class="col button button-fill color-blue" style="width:360px" onclick="OnPtzMouseRight()">Right</button>' +

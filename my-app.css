@@ -8,6 +8,8 @@
   align-items: center;
   background: #fff;
   color: #000;
+  max-width: 100%;
+  height: auto;
 }
 /*.demo-swiper .swiper-slide {
   box-sizing: border-box;
@@ -17,8 +19,14 @@
 .demo-swiper {
   margin: 0 0 0;
   font-size: 18px;
-  height: 60%;
+  height: auto;
   /*width: 30%;*/
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
 }
 
 /*.demo-swiper.demo-swiper-auto .swiper-slide {

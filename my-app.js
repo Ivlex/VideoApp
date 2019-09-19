@@ -122,3 +122,4 @@ var swiper = app.swiper.create('.swiper-container', {
 swiper.removeAllSlides();
 swiper.addSlide(0,'<div class="swiper-slide"><img src="http://192.168.3.151:18581/snapshot.cgi?res=0&user=admin&pwd=Yum8p3SRdN295k2"/></div>');
 swiper.addSlide(1,'<div class="swiper-slide"><img src="http://192.168.3.147:55845/snapshot.cgi?res=0&user=admin&pwd=Yum8p3SRdN295k2"/></div>');
+swiper.update();
